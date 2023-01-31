@@ -1,0 +1,5 @@
+C:\TCC\ApiSistemaDeTarefas\ApiSistemasDeTarefas.Services\obj\Debug\net6.0\ApiSistemasDeTarefas.Services.csproj.AssemblyReference.cache
+C:\TCC\ApiSistemaDeTarefas\ApiSistemasDeTarefas.Services\obj\Debug\net6.0\ApiSistemasDeTarefas.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\TCC\ApiSistemaDeTarefas\ApiSistemasDeTarefas.Services\obj\Debug\net6.0\ApiSistemasDeTarefas.Services.AssemblyInfoInputs.cache
+C:\TCC\ApiSistemaDeTarefas\ApiSistemasDeTarefas.Services\obj\Debug\net6.0\ApiSistemasDeTarefas.Services.AssemblyInfo.cs
+C:\TCC\ApiSistemaDeTarefas\ApiSistemasDeTarefas.Services\obj\Debug\net6.0\ApiSistemasDeTarefas.Services.csproj.CoreCompileInputs.cache

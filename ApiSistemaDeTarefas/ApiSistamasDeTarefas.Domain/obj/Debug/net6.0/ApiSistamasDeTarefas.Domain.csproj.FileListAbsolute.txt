@@ -1,0 +1,12 @@
+C:\TCC\ApiSistemaDeTarefas\ApiSistamasDeTarefas.Domain\bin\Debug\net6.0\ApiSistamasDeTarefas.Domain.deps.json
+C:\TCC\ApiSistemaDeTarefas\ApiSistamasDeTarefas.Domain\bin\Debug\net6.0\ApiSistamasDeTarefas.Domain.dll
+C:\TCC\ApiSistemaDeTarefas\ApiSistamasDeTarefas.Domain\bin\Debug\net6.0\ApiSistamasDeTarefas.Domain.pdb
+C:\TCC\ApiSistemaDeTarefas\ApiSistamasDeTarefas.Domain\obj\Debug\net6.0\ApiSistamasDeTarefas.Domain.csproj.AssemblyReference.cache
+C:\TCC\ApiSistemaDeTarefas\ApiSistamasDeTarefas.Domain\obj\Debug\net6.0\ApiSistamasDeTarefas.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\TCC\ApiSistemaDeTarefas\ApiSistamasDeTarefas.Domain\obj\Debug\net6.0\ApiSistamasDeTarefas.Domain.AssemblyInfoInputs.cache
+C:\TCC\ApiSistemaDeTarefas\ApiSistamasDeTarefas.Domain\obj\Debug\net6.0\ApiSistamasDeTarefas.Domain.AssemblyInfo.cs
+C:\TCC\ApiSistemaDeTarefas\ApiSistamasDeTarefas.Domain\obj\Debug\net6.0\ApiSistamasDeTarefas.Domain.csproj.CoreCompileInputs.cache
+C:\TCC\ApiSistemaDeTarefas\ApiSistamasDeTarefas.Domain\obj\Debug\net6.0\ApiSistamasDeTarefas.Domain.dll
+C:\TCC\ApiSistemaDeTarefas\ApiSistamasDeTarefas.Domain\obj\Debug\net6.0\refint\ApiSistamasDeTarefas.Domain.dll
+C:\TCC\ApiSistemaDeTarefas\ApiSistamasDeTarefas.Domain\obj\Debug\net6.0\ApiSistamasDeTarefas.Domain.pdb
+C:\TCC\ApiSistemaDeTarefas\ApiSistamasDeTarefas.Domain\obj\Debug\net6.0\ref\ApiSistamasDeTarefas.Domain.dll
