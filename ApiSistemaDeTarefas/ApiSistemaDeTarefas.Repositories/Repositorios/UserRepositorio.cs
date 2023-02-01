@@ -29,7 +29,7 @@ namespace ApiSistemaDeTarefas.Repositories.Repositorios
                         return new User()
                         {
                             Email = rdr["Nome"].ToString(),
-                            Password = rdr["Email"].ToString()
+                            Senha = rdr["Email"].ToString()
                         };
                     }
                     else

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ApiSistamasDeTarefas.Domain.Models
 {
-    public class User
+    public class Empresa
     {
         public int Id { get; set; }
-        public string Email { get; set; }
-        public string Senha { get; set; }
-        public string NivelAcesso { get; set; }
+        public string Cnpj { get; set; }
+        public string RazaoSocial { get; set; }
+        public DateTime DataDeCadastro { get; set; }
     }
 }
