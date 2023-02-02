@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U7dMOB53WVo0O5vSktYRWy9B7DImHAer2VBXTvME5Fhi4/r+iuuJjBKf4BePfMxjAd0RX1ZbwhqdXr3+EnM/UA==",
+  "dgSpecHash": "cYqCrXlhHlW5ADdt+xIOhPkcFEXxWSKKTN8ftGvMFI/4/iBv6HTIpxgrbziWpw+Tgq9Rycd16i7ceDzikfxqIg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Pichau\\OneDrive\\Área de Trabalho\\Lucas TCC\\ApiTccTarefas\\ApiSistemaDeTarefas\\ApiSistamasDeTarefas.Domain\\ApiSistamasDeTarefas.Domain.csproj",
+  "projectFilePath": "C:\\TCC\\ApiSistemaDeTarefas\\ApiSistamasDeTarefas.Domain\\ApiSistamasDeTarefas.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

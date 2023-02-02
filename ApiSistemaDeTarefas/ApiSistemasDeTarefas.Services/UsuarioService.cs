@@ -3,15 +3,15 @@ using ApiSistemaDeTarefas.Repositories.Repositorios;
 
 namespace ApiSistemasDeTarefas.Services
 {
-    public class UserService
+    public class UsuarioService
     {
-        private readonly UserRepositorio _repositorio;
-        public UserService(UserRepositorio repositorio)
+        private readonly UsuarioRepositorio _repositorio;
+        public UsuarioService(UsuarioRepositorio repositorio)
         {
             _repositorio = repositorio;
         }
 
-        public User Login(string email, string senha)
+        public Usuario Login(string email, string senha)
         {
             try
             {
@@ -21,7 +21,7 @@ namespace ApiSistemasDeTarefas.Services
                 }
 
                 _repositorio.AbrirConexao();
-                User usuario = _repositorio.Login(email, senha);
+                Usuario usuario = _repositorio.Login(email, senha);
 
                 if (usuario == null)
                 {
