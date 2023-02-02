@@ -2112,26 +2112,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lucas\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Pichau\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\TCC\\ApiSistemaDeTarefas\\ApiSistemaDeTarefas.Repositories\\ApiSistemaDeTarefas.Repositories.csproj",
+      "projectUniqueName": "C:\\Users\\Pichau\\OneDrive\\Área de Trabalho\\Lucas TCC\\ApiTccTarefas\\ApiSistemaDeTarefas\\ApiSistemaDeTarefas.Repositories\\ApiSistemaDeTarefas.Repositories.csproj",
       "projectName": "ApiSistemaDeTarefas.Repositories",
-      "projectPath": "C:\\TCC\\ApiSistemaDeTarefas\\ApiSistemaDeTarefas.Repositories\\ApiSistemaDeTarefas.Repositories.csproj",
-      "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\TCC\\ApiSistemaDeTarefas\\ApiSistemaDeTarefas.Repositories\\obj\\",
+      "projectPath": "C:\\Users\\Pichau\\OneDrive\\Área de Trabalho\\Lucas TCC\\ApiTccTarefas\\ApiSistemaDeTarefas\\ApiSistemaDeTarefas.Repositories\\ApiSistemaDeTarefas.Repositories.csproj",
+      "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Pichau\\OneDrive\\Área de Trabalho\\Lucas TCC\\ApiTccTarefas\\ApiSistemaDeTarefas\\ApiSistemaDeTarefas.Repositories\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Pichau\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2145,8 +2138,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\TCC\\ApiSistemaDeTarefas\\ApiSistamasDeTarefas.Domain\\ApiSistamasDeTarefas.Domain.csproj": {
-              "projectPath": "C:\\TCC\\ApiSistemaDeTarefas\\ApiSistamasDeTarefas.Domain\\ApiSistamasDeTarefas.Domain.csproj"
+            "C:\\Users\\Pichau\\OneDrive\\Área de Trabalho\\Lucas TCC\\ApiTccTarefas\\ApiSistemaDeTarefas\\ApiSistamasDeTarefas.Domain\\ApiSistamasDeTarefas.Domain.csproj": {
+              "projectPath": "C:\\Users\\Pichau\\OneDrive\\Área de Trabalho\\Lucas TCC\\ApiTccTarefas\\ApiSistemaDeTarefas\\ApiSistamasDeTarefas.Domain\\ApiSistamasDeTarefas.Domain.csproj"
             }
           }
         }
@@ -2186,7 +2179,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
