@@ -16,6 +16,9 @@ namespace ApiSistamasDeTarefas.Domain.Models
         public string Nome { get; set; }
 
         [Required]
+        public string Empresa { get; set; }
+
+        [Required]
         public DateTime HoraInicio { get; set; }
 
         [Required]

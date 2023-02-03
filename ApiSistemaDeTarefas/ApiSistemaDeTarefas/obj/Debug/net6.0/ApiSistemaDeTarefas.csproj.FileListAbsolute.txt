@@ -72,3 +72,16 @@ C:\TCC\ApiSistemaDeTarefas\ApiSistemaDeTarefas\bin\Debug\net6.0\ApiSistemasDeTar
 C:\TCC\ApiSistemaDeTarefas\ApiSistemaDeTarefas\bin\Debug\net6.0\ApiSistemasDeTarefas.Services.pdb
 C:\TCC\ApiSistemaDeTarefas\ApiSistemaDeTarefas\bin\Debug\net6.0\ApiSistamasDeTarefas.Domain.pdb
 C:\TCC\ApiSistemaDeTarefas\ApiSistemaDeTarefas\bin\Debug\net6.0\ApiSistemaDeTarefas.Repositories.pdb
+C:\TCC\ApiSistemaDeTarefas\ApiSistemaDeTarefas\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\TCC\ApiSistemaDeTarefas\ApiSistemaDeTarefas\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\TCC\ApiSistemaDeTarefas\ApiSistemaDeTarefas\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\TCC\ApiSistemaDeTarefas\ApiSistemaDeTarefas\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\TCC\ApiSistemaDeTarefas\ApiSistemaDeTarefas\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\TCC\ApiSistemaDeTarefas\ApiSistemaDeTarefas\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\TCC\ApiSistemaDeTarefas\ApiSistemaDeTarefas\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\TCC\ApiSistemaDeTarefas\ApiSistemaDeTarefas\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\TCC\ApiSistemaDeTarefas\ApiSistemaDeTarefas\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\TCC\ApiSistemaDeTarefas\ApiSistemaDeTarefas\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\TCC\ApiSistemaDeTarefas\ApiSistemaDeTarefas\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\TCC\ApiSistemaDeTarefas\ApiSistemaDeTarefas\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\TCC\ApiSistemaDeTarefas\ApiSistemaDeTarefas\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
