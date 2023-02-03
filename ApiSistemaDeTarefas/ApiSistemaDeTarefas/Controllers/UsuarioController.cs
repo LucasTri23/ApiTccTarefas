@@ -17,7 +17,7 @@ namespace ApiSistemasDeTarefas.Controllers
         private readonly UsuarioService _usuarioService;
         private readonly AutorizacaoService _servico;
 
-        public UsuarioController(UsuarioService usuarioService, UsuarioController service)
+        public UsuarioController(UsuarioService usuarioService, AutorizacaoService service)
         {
             _usuarioService = usuarioService;
             _servico = service;

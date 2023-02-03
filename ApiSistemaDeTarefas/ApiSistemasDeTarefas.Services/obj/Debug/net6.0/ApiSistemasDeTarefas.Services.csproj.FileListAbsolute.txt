@@ -3,3 +3,15 @@ C:\TCC\ApiSistemaDeTarefas\ApiSistemasDeTarefas.Services\obj\Debug\net6.0\ApiSis
 C:\TCC\ApiSistemaDeTarefas\ApiSistemasDeTarefas.Services\obj\Debug\net6.0\ApiSistemasDeTarefas.Services.AssemblyInfoInputs.cache
 C:\TCC\ApiSistemaDeTarefas\ApiSistemasDeTarefas.Services\obj\Debug\net6.0\ApiSistemasDeTarefas.Services.AssemblyInfo.cs
 C:\TCC\ApiSistemaDeTarefas\ApiSistemasDeTarefas.Services\obj\Debug\net6.0\ApiSistemasDeTarefas.Services.csproj.CoreCompileInputs.cache
+C:\TCC\ApiSistemaDeTarefas\ApiSistemasDeTarefas.Services\bin\Debug\net6.0\ApiSistemasDeTarefas.Services.deps.json
+C:\TCC\ApiSistemaDeTarefas\ApiSistemasDeTarefas.Services\bin\Debug\net6.0\ApiSistemasDeTarefas.Services.dll
+C:\TCC\ApiSistemaDeTarefas\ApiSistemasDeTarefas.Services\bin\Debug\net6.0\ApiSistemasDeTarefas.Services.pdb
+C:\TCC\ApiSistemaDeTarefas\ApiSistemasDeTarefas.Services\bin\Debug\net6.0\ApiSistamasDeTarefas.Domain.dll
+C:\TCC\ApiSistemaDeTarefas\ApiSistemasDeTarefas.Services\bin\Debug\net6.0\ApiSistemaDeTarefas.Repositories.dll
+C:\TCC\ApiSistemaDeTarefas\ApiSistemasDeTarefas.Services\bin\Debug\net6.0\ApiSistamasDeTarefas.Domain.pdb
+C:\TCC\ApiSistemaDeTarefas\ApiSistemasDeTarefas.Services\bin\Debug\net6.0\ApiSistemaDeTarefas.Repositories.pdb
+C:\TCC\ApiSistemaDeTarefas\ApiSistemasDeTarefas.Services\obj\Debug\net6.0\ApiSistemasDeTarefas.Services.csproj.CopyComplete
+C:\TCC\ApiSistemaDeTarefas\ApiSistemasDeTarefas.Services\obj\Debug\net6.0\ApiSistemasDeTarefas.Services.dll
+C:\TCC\ApiSistemaDeTarefas\ApiSistemasDeTarefas.Services\obj\Debug\net6.0\refint\ApiSistemasDeTarefas.Services.dll
+C:\TCC\ApiSistemaDeTarefas\ApiSistemasDeTarefas.Services\obj\Debug\net6.0\ApiSistemasDeTarefas.Services.pdb
+C:\TCC\ApiSistemaDeTarefas\ApiSistemasDeTarefas.Services\obj\Debug\net6.0\ref\ApiSistemasDeTarefas.Services.dll

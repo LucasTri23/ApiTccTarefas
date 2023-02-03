@@ -1,5 +1,6 @@
 ﻿using ApiSistamasDeTarefas.Domain.Models;
 using ApiSistemaDeTarefas.Repositories.Repositorios;
+using System.Text;
 
 namespace ApiSistemasDeTarefas.Services
 {
@@ -11,28 +12,33 @@ namespace ApiSistemasDeTarefas.Services
             _repositorio = repositorio;
         }
 
-        public Usuario Login(string email, string senha)
+        public Usuario? ObterUsuarioPorCredenciais(string email, string senha, bool isDescriptografado = true)
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(senha))
-                {
-                    throw new ArgumentException("E-mail e senha são obrigatórios.");
-                }
-
                 _repositorio.AbrirConexao();
-                Usuario usuario = _repositorio.Login(email, senha);
 
-                if (usuario == null)
-                {
-                    throw new InvalidOperationException("E-mail ou senha inválidos.");
-                }
+                if (isDescriptografado)
+                    senha = CriptografarSha512(senha);
 
-                return usuario;
+                return _repositorio.ValidarUsuario(email, senha);
             }
             finally
             {
                 _repositorio.FecharConexao();
+            }
+        }
+
+        private static string CriptografarSha512(string texto)
+        {
+            var bytes = Encoding.UTF8.GetBytes(texto);
+            using (var hash = System.Security.Cryptography.SHA512.Create())
+            {
+                var hashedInputBytes = hash.ComputeHash(bytes);
+                var hashedInputStringBuilder = new StringBuilder(128);
+                foreach (var b in hashedInputBytes)
+                    hashedInputStringBuilder.Append(b.ToString("X2"));
+                return hashedInputStringBuilder.ToString().ToLower();
             }
         }
     }
