@@ -22,6 +22,9 @@ namespace ApiSistamasDeTarefas.Domain.Models
         public DateTime HoraInicio { get; set; }
 
         [Required]
+        public string? Descricao { get; set; }
+
+        [Required]
         public DateTime HoraFinal { get; set; }
 
         [Required]
