@@ -1,4 +1,7 @@
 ﻿using ApiSistamasDeTarefas.Domain.Models;
+using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,66 +10,144 @@ using System.Threading.Tasks;
 
 namespace ApiSistemaDeTarefas.Repositories.Repositorios
 {
-    public class TarefaRepositorio
+    public class TarefaRepositorio : Contexto
     {
-        private readonly Contexto _context;
+        private List<Tarefa> tarefasA;
 
-        public TarefaRepositorio(Contexto context)
+        private readonly Contexto _contexto;
+        public TarefaRepositorio(IConfiguration configuration) : base(configuration)
         {
-            _context = context;
+            _contexto = new Contexto(configuration);
+            tarefasA = new List<Tarefa>();
+
         }
 
-        public void Adicionar(Tarefa tarefa)
+        public void CadastrarTarefa(Tarefa tarefa)
         {
-            _context.Tarefas.Add(tarefa);
-            _context.SaveChanges();
+            string sql = "INSERT INTO Tarefa (Nome, Empresa, HoraInicio, HoraFinal, UsuarioId) " +
+                         "VALUES (@Nome, @Empresa, @HoraInicio, @HoraFinal, @UsuarioId)";
+
+            using (var cmd = new SqlCommand(sql, _contexto._conn))
+            {
+                cmd.Parameters.AddWithValue("@Nome", tarefa.Nome);
+                cmd.Parameters.AddWithValue("@Empresa", tarefa.Empresa);
+                cmd.Parameters.AddWithValue("@HoraInicio", tarefa.HoraInicio);
+                cmd.Parameters.AddWithValue("@HoraFinal", tarefa.HoraFinal);
+                cmd.Parameters.AddWithValue("@UsuarioId", tarefa.UsuarioId);
+
+                cmd.ExecuteNonQuery();
+            }
         }
 
-        public void Atualizar(Tarefa tarefa)
+        public void Atualizar(Tarefa model)
         {
-            _context.Tarefas.Update(tarefa);
-            _context.SaveChanges();
+            string comandoSql = @"UPDATE Tarefa 
+                                SET 
+                                    Nome = @Nome,
+                                    HoraInicio = @HoraInicio,
+                                    HoraFinal = @HoraFinal, 
+                                    Empresa = @Empresa
+                                WHERE Nome = @Nome;";
+
+            using (var cmd = new SqlCommand(comandoSql, _conn))
+            {
+                cmd.Parameters.AddWithValue("@Nome", model.Nome);
+                cmd.Parameters.AddWithValue("@HoraInicio", model.HoraInicio);
+                cmd.Parameters.AddWithValue("@HoraFinal", model.HoraFinal);
+                cmd.Parameters.AddWithValue("@Empresa", model.Empresa);
+                if (cmd.ExecuteNonQuery() == 0)
+                    throw new InvalidOperationException($"Nenhum registro afetado para o cnpj {model.Nome}");
+            }
         }
 
-        public Tarefa ObterPorId(int id)
+
+        public bool SeExiste(string tarefa)
         {
-            return _context.Tarefas.Find(id);
+            string comandoSql = @"SELECT COUNT(Tarefa) as total FROM Tarefa WHERE Nome= @Nome";
+
+            using (var cmd = new SqlCommand(comandoSql, _conn))
+            {
+                cmd.Parameters.AddWithValue("@Nome", tarefa);
+                return Convert.ToBoolean(cmd.ExecuteScalar());
+            }
         }
 
-        public IQueryable<Tarefa> ObterTodos()
+        public void Deletar(string nomeDaTarefa)
         {
-            return _context.Tarefas.Include(x => x.Usuario);
+            string comandoSql = @"DELETE FROM Tarefa 
+                    WHERE Nome = @Nome;";
+
+            using (var cmd = new SqlCommand(comandoSql, _conn))
+            {
+                cmd.Parameters.AddWithValue("@Nome", nomeDaTarefa);
+                if (cmd.ExecuteNonQuery() == 0)
+                    throw new InvalidOperationException($"Nenhum registro afetado para o nome {nomeDaTarefa}");
+            }
         }
 
-        public void Remover(int id)
+        public List<Tarefa> ObterTarefas(int usuarioId)
         {
-            var tarefa = _context.Tarefas.Find(id);
-            _context.Tarefas.Remove(tarefa);
-            _context.SaveChanges();
+            List<Tarefa> tarefas = new List<Tarefa>();
+
+            string sql = "SELECT Id, Nome, Empresa, HoraInicio, HoraFinal, UsuarioId " +
+                         "FROM Tarefa " +
+                         "WHERE UsuarioId = @UsuarioId";
+
+            using (var cmd = new SqlCommand(sql, _contexto._conn))
+            {
+                cmd.Parameters.AddWithValue("@UsuarioId", usuarioId);
+
+                using (var rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        tarefas.Add(new Tarefa
+                        {
+                            Id = Convert.ToInt32(rd["Id"]),
+                            Nome = rd["Nome"].ToString(),
+                            Empresa = rd["Empresa"].ToString(),
+                            HoraInicio = Convert.ToDateTime(rd["HoraInicio"]),
+                            HoraFinal = Convert.ToDateTime(rd["HoraFinal"]),
+                            UsuarioId = Convert.ToInt32(rd["UsuarioId"])
+                        });
+                    }
+                }
+            }
+
+            return tarefas;
+        }
+    
+
+
+        public abstract class ExibicaoTarefa
+        {
+            public abstract void ExibirTarefas(List<Tarefa> tarefasA);
+
+            public abstract List<Tarefa> OrdenarTarefas(List<Tarefa> tarefasA);
         }
 
-        public IQueryable<Tarefa> ObterTarefasDoDia()
+
+        public class ExibicaoTarefaLista : ExibicaoTarefa
         {
-            var hoje = DateTime.Today;
-            return _context.Tarefas.Where(x => x.HoraInicio.Date == hoje).Include(x => x.Usuario);
+            public override void ExibirTarefas(List<Tarefa> tarefasA)
+            {
+                Console.WriteLine("Exibição da lista de tarefas:");
+                foreach (var tarefa in tarefasA)
+                {
+                    Console.WriteLine("Data e hora Inicio: {0} - Data e hora Final: {1} - Empresa: {2} - Descrição: {3}",
+                    tarefa.HoraInicio.ToString("dd/MM/yyyy"), tarefa.HoraFinal.ToString("HH:mm"), tarefa.Empresa, tarefa.Descricao);
+                }
+            }
+
+            public override List<Tarefa> OrdenarTarefas(List<Tarefa> tarefas)
+            {
+            return tarefas.OrderBy(t => t.HoraInicio).ThenBy(t => t.HoraFinal).ToList();
+            }
         }
 
-        public IQueryable<Tarefa> ObterTarefasDaSemana()
-        {
-            var hoje = DateTime.Today;
-            var primeiroDiaDaSemana = hoje.AddDays(-(int)hoje.DayOfWeek + (int)DayOfWeek.Monday);
-            var ultimoDiaDaSemana = primeiroDiaDaSemana.AddDays(7).AddSeconds(-1);
-            return _context.Tarefas.Where(x => x.HoraInicio >= primeiroDiaDaSemana && x.HoraInicio <= ultimoDiaDaSemana).Include(x => x.Usuario);
-        }
-
-        public IQueryable<Tarefa> ObterTarefasDoMes()
-        {
-            var hoje = DateTime.Today;
-            var primeiroDiaDoMes = new DateTime(hoje.Year, hoje.Month, 1);
-            var ultimoDiaDoMes = primeiroDiaDoMes.AddMonths(1).AddDays(-1);
-            return _context.Tarefas.Where(x => x.HoraInicio >= primeiroDiaDoMes && x.HoraInicio <= ultimoDiaDoMes).Include(x => x.Usuario);
-        }
 
 
     }
 }
+
+
