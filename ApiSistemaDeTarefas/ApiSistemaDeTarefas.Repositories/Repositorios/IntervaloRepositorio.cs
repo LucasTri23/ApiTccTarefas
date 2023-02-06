@@ -86,31 +86,6 @@ namespace ApiSistemaDeTarefas.Repositories.Repositorios
                 }
             }
         }
-
-        public List<Intervalo> ObterTodos(int id)
-        {
-            List<Intervalo> intervalo = new List<Intervalo>();
-
-            string comandoSql = @"SELECT Id, HoraInicio, HoraFinal, NomeDesenvolvedor FROM Intervalo";
-            using (var cmd = new SqlCommand(comandoSql, _contexto, _conn))
-            {
-                cmd.Parameters.AddWithValue("@Id", id);
-                using (var rd = cmd.ExecuteReader())
-                {
-                    while (rd.Read())
-                    {
-                        intervalo.Add(new Intervalo
-                        {
-                            Id = Convert.ToInt32(rd["Id"]),
-                            HoraInicio = Convert.ToDateTime(rd["HoraInicio"]),
-                            HoraFinal = Convert.ToDateTime(rd["HoraFinal"]),
-                            NomeDesenvolvedor = rd["Nome"].ToString(),
-                        });
-                    }
-                }
-            }
-            return intervalo;
-        }
                 
     }
 }
